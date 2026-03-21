@@ -249,7 +249,7 @@ const srvDot = document.getElementById('srv-dot');
 const srvLbl = document.getElementById('srv-label');
 async function checkConnection() {
   try {
-    await fetch(API + '/api/stats');
+    await fetch(API + '/api/stats', {mode: 'cors'});
     badge.className = 'conn-badge online'; badge.textContent = 'Servidor online';
     srvDot.style.background = '#52e07a'; srvLbl.textContent = 'Servidor online';
   } catch {
