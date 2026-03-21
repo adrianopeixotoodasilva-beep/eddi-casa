@@ -258,7 +258,10 @@ async function checkConnection() {
     srvDot.style.background = '#e05252'; srvLbl.textContent = 'Sem conexão';
   }
 }
-checkConnection(); setInterval(checkConnection, 10000);
+window.addEventListener('load', () => {
+  checkConnection();
+  setInterval(checkConnection, 10000);
+});
 
 const buttons = document.querySelectorAll('.nav-btn');
 const panels  = document.querySelectorAll('.panel-view');
